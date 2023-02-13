@@ -1,0 +1,110 @@
+1. What is git?
+	Git is open source distributed version control system. 
+
+2. Why use version control?
+	To track the historical changes in a file. Any file type.
+	
+3. What is difference between git & github?
+	Git is defined under (1). Github is a company which provides a remote platform to share files over the internet. 
+	Who owns git? 	Community.	It is open source.
+	Who owns Github? Microsoft.
+
+4. Why need remotes?
+	To colloborate with other users.
+	
+5. Do I need to install?
+	Yes. You need to install git in your machine. Download from https://git-scm.com or any gui client if you like.
+
+6. How can I access git?
+	Interact via command line(code) or GUI(visual)
+	
+7. What is a repository/repo?
+	Logical folder or A collection of files that need to be tracked for changes.
+	
+8. Where do you create repo?
+	You can create it anywhere you have a git environment. Typically on a pc or on a mac. These repos can be pushed to remotes which can then serve to other users.
+	
+9. How to create repo in code?
+	After installing git, do a "git init" in a folder of your preference.
+	
+Simple tasks
+
+local -> remotes -> other user's local
+
+1. 	do only one of Initialization and clone
+	
+	Initialization
+	D:\Projects\gittraining> git init
+		Repository created
+
+	(or)
+	
+	Clone
+	D:\Projects\gittraining> git clone
+	
+	(or) 
+	Fork the repo and then clone in your local.
+
+2. Show all settings
+	D:\Projects\gittraining> git config --list --show-origin
+	
+3. Set your identity
+	D:\Projects\gittraining> git config --global user.name <your name>
+	D:\Projects\gittraining> git config --global user.email <your email>
+
+4. View current branch
+	D:\Projects\gittraining> git branch
+
+5. View current status of files
+	D:\Projects\gittraining> git status	
+	
+	Add a new file to the folder using any other software
+
+	D:\Projects\gittraining> git status	
+	
+6. Add files to the repo - why? - Need to add the files to the repo to start tracking them.
+	D:\Projects\gittraining> git add . 
+	
+	Notice the dot after the add. Dot adds all files.
+	You can also add specific files by specifying the file name.
+
+7. Commit the changes
+	D:\Projects\gittraining> git commit
+
+8. Create new branch
+	D:\Projects\gittraining> git branch <new branch name>
+	
+9. Change branch
+	D:\Projects\gittraining> git checkout <branch name>
+
+10. Ignore some files.
+	D:\Projects\gittraining> 
+	Create a file named nottobetracked.txt
+	Create a file called .gitignore. Not the dot before the gitignore. 
+	
+11. Add a new remote 
+	D:\Projects\gittraining>git remote add "Training" git@github.com:git-training-i/training.git
+
+12. Push changes to repo
+	git push origin
+	git push origin HEAD
+
+13. Fetch latest changes - just to view
+	git fetch origin
+
+14. Pull latest changes from repo branch to current branch. 
+	git pull origin <branch name>
+
+15. Merge 
+	From current branch,
+		git merge <otherbranch>
+	
+16. Easier with github. pull request - https://git-scm.com/docs/git-request-pull
+	git push https://git.ko.xz/project master
+	git request-pull v1.0 https://git.ko.xz/project master
+
+conflicts
+
+Want to learn more?
+1. https://git-scm.com/
+2. https://swcarpentry.github.io/git-novice/
